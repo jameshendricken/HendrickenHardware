@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactPage = () => {
   return (
-    <div className="p-4 mx-9">
+    <div className="p-4">
         <h1 className="text-2xl">
             Contact us Page
         </h1>

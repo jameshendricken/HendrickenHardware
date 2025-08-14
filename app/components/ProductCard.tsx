@@ -1,31 +1,41 @@
 
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 
 // ProductCard component
 
 
 interface ProductCardProps {
   title: string;
+  description?: string; // Optional prop for description
+  productLink?: string; // Optional prop for product link
+  imageSrc?: string; // Optional prop for image source
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ title }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ title, description, productLink, imageSrc }) => {
   return (
-    <div className="card bg-base-200 w-96 shadow-md p-3 rounded-lg">
+    <div className="card max-w-96 shadow-md p-3 rounded-lg hover:shadow-2xl transition-shadow duration-300">
       
       <figure>
         <Image
-          src="/blupura.jpg"
-          alt="blupura"
+          src={imageSrc || "/default-image.jpg"} // Default image if none provided
+          alt="Product Image"
           width={200}
           height={200}
-          className="rounded-lg shadow-2xl"
+          className="rounded-lg shadow-2xl m-2 "
         />
       </figure>
-      <div className="card-body">
+      <div className="card-body pt-2">
         <h2 className="card-title">{title}</h2>
-        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-        <button className="btn btn-primary">More Info</button>
+        <p className="text-sm text-gray-600">
+          {description || "No description available."}
+        </p>
+        <button className="btn btn-primary">
+          <Link href={productLink || "#"}>
+            View Product
+          </Link>
+        </button>
       </div>
     </div>
   )
