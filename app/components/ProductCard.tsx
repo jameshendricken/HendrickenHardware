@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 // ProductCard component
 
@@ -28,14 +29,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, description, productLi
       </figure>
       <div className="card-body pt-2">
         <h2 className="card-title">{title}</h2>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-gray-600 dark:text-gray-500 text-justify">
           {description || "No description available."}
         </p>
-        <button className="btn btn-primary">
-          <Link href={productLink || "#"}>
-            View Product
-          </Link>
-        </button>
+        <Button>
+          <Link href={productLink || "#"} className="rounded-2xl">View Product</Link>
+        </Button>
       </div>
     </div>
   )

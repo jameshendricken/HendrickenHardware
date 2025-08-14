@@ -1,10 +1,13 @@
+import Card from "./components/card";
+import { DarkModeToggle } from "./components/DarkModeToggle";
 import Hero from "./components/Hero";
 
 
 export default function Home() {
   return (
     <main >
-      <div className=" ">
+      <DarkModeToggle/>
+      <div className=" pb-4">
         <Hero 
           title="Welcome to Hendricken Hardware"
           description="Your one-stop shop for all hardware needs. Explore our wide range of products and services designed to meet your every requirement."
@@ -14,9 +17,9 @@ export default function Home() {
           direction="left" // Change to "right" if you want the image on the right side
         />
       </div>
-
-      <div>
-        <Hero 
+      
+      <div className="pb-4">
+        <Card 
           title="Products"
           description="Discover our latest offerings in hardware tools, garden supplies, and more. Quality products at unbeatable prices."
           buttonText="View Products"
@@ -26,7 +29,7 @@ export default function Home() {
         />
       </div>
       <div>
-        <Hero 
+        <Card 
         title="Services"
         description="We offer a range of services to help you with your hardware needs, from installation to maintenance. Contact us for more details."
         buttonText="Learn More"
@@ -35,6 +38,8 @@ export default function Home() {
         direction="left" // Change to "right" if you want the image on the right side
         />
       </div>
+
+      
 
     </main>
   );

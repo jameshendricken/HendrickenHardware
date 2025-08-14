@@ -7,7 +7,7 @@ import { MdOutlineHomeRepairService } from "react-icons/md";
 
 const ServicesPage = () => {
   return (
-    <div className="p-4">
+    <div className="">
         <h1 className="text-2xl">
             Services
         </h1>

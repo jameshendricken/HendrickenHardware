@@ -3,7 +3,7 @@ import ProductCard from '../components/ProductCard'
 
 const ProductsPage = () => {
   return (
-    <div className="p-4">
+    <div className="">
         <h1 className="text-2xl">
             Products
         </h1>
