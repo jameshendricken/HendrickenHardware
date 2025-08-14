@@ -1,7 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
 interface HeroProps {
     // Define any props if needed
@@ -15,10 +13,10 @@ interface HeroProps {
     svgElement?: React.ReactNode; // Optional prop for SVG element
 }
 
-const Hero: React.FC<HeroProps> = ({ title, description, buttonText, buttonLink, imageSrc, direction, svgElement }) => {
+const Hero: React.FC<HeroProps> = ({ title, description, imageSrc, svgElement }) => {
 
   return (
-    <div className="hero bg-base-200  min-h-[80vh]">
+    <div className="min-h-[80vh]">
         <div className="hero-content flex-col justify-center items-center">
             {imageSrc ? (
                             <Image

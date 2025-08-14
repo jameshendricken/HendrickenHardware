@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { RiNextjsFill, RiWaterFlashFill } from 'react-icons/ri';
+import { RiWaterFlashFill } from 'react-icons/ri';
 import { BiMenu, BiX } from 'react-icons/bi';
 
 const CustomNavbar = () => {
