@@ -18,8 +18,8 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, description, buttonText, buttonLink, imageSrc, direction, svgElement }) => {
 
   return (
-    <div className="hero bg-base-200  min-h-[30vh] py-10">
-        <div className={`hero-content  flex-col lg:flex-row${direction === 'right' ? '-reverse' : ''}`}>
+    <div className="hero min-h-[30vh] py-10">
+        <div className={`hero-content bg-card text-card-foreground rounded-2xl flex-col lg:flex-row${direction === 'right' ? '-reverse' : ''}`}>
             {imageSrc ? (
                             <Image
                                 src={imageSrc}

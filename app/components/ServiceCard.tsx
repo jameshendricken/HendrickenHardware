@@ -12,8 +12,8 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({title, description, imageSrc, svgElement}) => {
   return (
-    <div className="card lg:card-side bg-base-100 shadow-sm">
-        <figure>
+    <div className="card lg:card-side bg-card shadow-sm mt-4">
+        <figure className='pt-4'>
             {imageSrc ? (
                 <Image
                     src={imageSrc}

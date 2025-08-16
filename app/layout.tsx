@@ -39,7 +39,7 @@ export default function RootLayout({
 
           <div className=" flex flex-col justify-center items-center">
 
-          <div className=" container lg:mx-32 px-8 py-8 flex-grow">
+          <div className=" container lg:mx-32 px-8 py-8 flex-grow bg-background">
             
             <ThemeProvider attribute={"class"} enableSystem defaultTheme="system">
               {children}
